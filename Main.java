@@ -37,15 +37,6 @@ public class Main extends ActiveScript implements PaintListener, MessageListener
 
     @Override
     public void onStart() {
-
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                //GUI gui = new GUI();
-                // gui.setVisible(true);
-            }
-        });
-
         Mouse.setSpeed(Mouse.Speed.VERY_FAST);
         startTime = System.currentTimeMillis();
     }
@@ -53,7 +44,6 @@ public class Main extends ActiveScript implements PaintListener, MessageListener
 
     @Override
     public int loop() {
-        System.out.println("Hey");
 
         /*Checks if map is loaded*/
         if (Game.getClientState() != Game.INDEX_MAP_LOADED) {
